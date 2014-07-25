@@ -25,6 +25,7 @@ class TestRwepay < Test::Unit::TestCase
     assert_equal result_json, result_json
   end
 
+
   #def test_notify_verify
   #  params = "xxx"
   #

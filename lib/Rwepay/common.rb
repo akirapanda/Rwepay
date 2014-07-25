@@ -160,6 +160,7 @@ module Rwepay::Common
   def self.get_order_query(options = {}, access_token)
     package = "out_trade_no=#{options[:out_trade_no]}&partner=#{options[:partner_id]}"
     md5_package_sign = md5_sign "#{package}&key=#{options[:partner_key]}"
+    md5_package_sign = md5_package_sign.upcase
     for_sign_data = {
         :appid     => options[:app_id],
         :appkey    => options[:app_key],
